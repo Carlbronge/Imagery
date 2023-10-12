@@ -47,5 +47,7 @@ This function takes an input image and a list of filters and returns a list of 2
 def convolve_with_filters(image, filters):
     return [convolve2d(image, filt, mode='valid') for filt in filters]
 ```
+```
 n = 3
 ```
+
