@@ -42,6 +42,7 @@ image = io.imread("https://media.istockphoto.com/id/481526876/photo/boreal-owl-i
 image = image[:,:,:]
 
 plot(image)
+```
 ![Unknown](https://github.com/Carlbronge/Imagery/assets/143009718/db74a449-fefb-4eb5-90e3-2bd97c035de6)
 
 
