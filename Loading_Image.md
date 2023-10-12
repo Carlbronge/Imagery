@@ -44,5 +44,11 @@ image = image[:,:,:]
 plot(image)
 ```
 ![Unknown](https://github.com/Carlbronge/Imagery/assets/143009718/db74a449-fefb-4eb5-90e3-2bd97c035de6)
-
+```
+```
+The shape of the picture can be shown using the following function
+```
+image.shape
+```
+(398, 612, 3)
 
