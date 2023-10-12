@@ -45,4 +45,3 @@ The following function shows the shape of the image
 resized_image.shape
 ```
 (224, 224, 3)
-```
