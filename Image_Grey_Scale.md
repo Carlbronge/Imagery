@@ -38,3 +38,23 @@ plt.imshow(cropped_image, cmap='gray')
 plt.axis('off')  # Hide axes
 plt.show()
 ```
+![Unknown-2](https://github.com/Carlbronge/Imagery/assets/143009718/62c3170b-c138-4a0f-aef1-959daf7f57a3)
+
+## Showing a Grey Scale Copy of the Resized Image
+The follwoing function turns the cropped image from a RGB color scale to a grey color scale
+```
+gray_image = color.rgb2gray(resized_image)
+```
+This function plots the new grey scale cropped image
+```
+plt.imshow(gray_image, cmap='gray')
+plt.axis('off')  # Hide axes
+plt.show()
+```
+![Unknown-3](https://github.com/Carlbronge/Imagery/assets/143009718/75a292a0-02c0-4daa-b054-43b50737d200)
+
+This function shows the shape of the grey scale image
+```
+gray_image.shape
+```
+(224, 224)
