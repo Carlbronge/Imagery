@@ -47,7 +47,35 @@ This function takes an input image and a list of filters and returns a list of 2
 def convolve_with_filters(image, filters):
     return [convolve2d(image, filt, mode='valid') for filt in filters]
 ```
+This is the size of the filters
 ```
 n = 3
 ```
+This is the number of filters being applied along with their height, each will hold 10 random 3x3 matrices with each matrix in the list having values drawn from the standard normal distribution
+```
+filters = generate_random_filters(10, n)
+```
+This is a function to call the previously described convolve_with_filters function and it assigns the result to the variable feature maps.
+```
+feature_maps = convolve_with_filters(image, filters)
+```
+## Plotting the Image
+This is the function that convolves the orignal image into 10 differnt images each having their own feature map plotted side by side
+```
+plt.figure(figsize=(15, 15))
+for i, (filt, feature_map) in enumerate(zip(filters, feature_maps)):
+    plt.subplot(10, 2, 2*i+1)
+    plt.imshow(filt, cmap="gray")
+    plt.title(f"Filter {i+1}")
+    plt.axis('off')
+    
+    plt.subplot(10, 2, 2*i+2)
+    plt.imshow(feature_map, cmap="gray")
+    plt.title(f"Feature Map {i+1}")
+    plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+```
+![Unknown-5](https://github.com/Carlbronge/Imagery/assets/143009718/6c9b352b-e8e6-44c2-883c-ccd03f7b3f7f)
 
